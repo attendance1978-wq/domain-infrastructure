@@ -1,0 +1,17 @@
+---
+- name: Install docker
+  ansible.builtin.package:
+    name: docker
+    state: present
+
+- name: Enable docker
+  ansible.builtin.service:
+    name: docker
+    state: started
+    enabled: true
+
+- name: Install docker compose plugin
+  ansible.builtin.package:
+    name: docker-compose-plugin
+    state: present
+  ignore_errors: true

@@ -1,0 +1,4 @@
+records:
+  - { name: "@",    value: 203.0.113.10, ttl: 300 }
+  - { name: mail,   value: 203.0.113.20, ttl: 300 }
+  - { name: api,    value: 203.0.113.31, ttl: 300 }

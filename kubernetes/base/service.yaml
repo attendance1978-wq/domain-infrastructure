@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: domain-app
+spec:
+  type: ClusterIP
+  selector: { app: domain-app }
+  ports:
+    - port: 80
+      targetPort: 8080

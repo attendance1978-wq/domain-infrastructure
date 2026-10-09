@@ -1,0 +1,12 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Network" id="net1">
+    <mxGraphModel dx="800" dy="600" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="vpc" value="VPC" style="rounded=1;fillColor=#dae8fc;" vertex="1" parent="1"><mxGeometry x="40" y="40" width="600" height="360" as="geometry"/></mxCell>
+        <mxCell id="pub" value="Public subnets (ALB, NAT)" style="rounded=1;fillColor=#d5e8d4;" vertex="1" parent="1"><mxGeometry x="70" y="80" width="540" height="100" as="geometry"/></mxCell>
+        <mxCell id="priv" value="Private subnets (App, RDS)" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1"><mxGeometry x="70" y="220" width="540" height="140" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

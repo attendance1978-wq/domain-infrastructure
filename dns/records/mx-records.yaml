@@ -1,0 +1,2 @@
+records:
+  - { name: "@", priority: 10, value: mail.example.com., ttl: 3600 }

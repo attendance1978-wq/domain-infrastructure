@@ -1,0 +1,19 @@
+---
+- name: Install node_exporter
+  ansible.builtin.package:
+    name: node_exporter
+    state: present
+  ignore_errors: true
+
+- name: Enable node_exporter
+  ansible.builtin.service:
+    name: node_exporter
+    state: started
+    enabled: true
+  ignore_errors: true
+
+- name: Install promtail
+  ansible.builtin.package:
+    name: promtail
+    state: present
+  ignore_errors: true

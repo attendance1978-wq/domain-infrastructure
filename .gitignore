@@ -1,0 +1,18 @@
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+!*.tfvars.example
+!environments/*/terraform.tfvars
+.terraform.lock.hcl.bak
+# Secrets
+.env
+*.pem
+*.key
+ssl/certs/*
+!ssl/certs/.gitkeep
+# Misc
+.DS_Store
+*.retry

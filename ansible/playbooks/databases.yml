@@ -1,0 +1,11 @@
+---
+- name: Configure database servers
+  hosts: databases
+  become: true
+  roles:
+    - monitoring
+  tasks:
+    - name: Ensure postgres client present
+      ansible.builtin.package:
+        name: postgresql
+        state: present

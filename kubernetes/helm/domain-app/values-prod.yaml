@@ -1,0 +1,6 @@
+replicaCount: 5
+image:
+  tag: v1.0.0
+resources:
+  requests: { cpu: 250m, memory: 256Mi }
+  limits:   { cpu: 1000m, memory: 512Mi }

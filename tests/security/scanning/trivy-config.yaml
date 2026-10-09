@@ -1,0 +1,9 @@
+severity:
+  - HIGH
+  - CRITICAL
+scan:
+  scanners:
+    - misconfig
+    - secret
+exit-code: 1
+ignorefile: .trivyignore

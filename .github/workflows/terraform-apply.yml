@@ -1,0 +1,20 @@
+name: terraform-apply
+on:
+  push:
+    branches: [main]
+    paths: ["terraform/**"]
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.7.5
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_APPLY_ROLE_ARN }}
+          aws-region: us-east-1
+      - run: terraform -chdir=terraform/environments/production init -input=false
+      - run: terraform -chdir=terraform/environments/production apply -auto-approve -input=false

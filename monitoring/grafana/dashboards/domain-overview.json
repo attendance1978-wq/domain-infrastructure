@@ -1,0 +1,19 @@
+{
+  "title": "Domain Overview",
+  "uid": "domain-overview",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "30s",
+  "panels": [
+    {
+      "id": 1, "type": "stat", "title": "Targets Up",
+      "gridPos": {"h": 6, "w": 6, "x": 0, "y": 0},
+      "targets": [{"expr": "sum(up)", "refId": "A"}]
+    },
+    {
+      "id": 2, "type": "timeseries", "title": "CPU Usage",
+      "gridPos": {"h": 8, "w": 18, "x": 6, "y": 0},
+      "targets": [{"expr": "100 - (avg by(instance)(rate(node_cpu_seconds_total{mode=\"idle\"}[5m])) * 100)", "refId": "A"}]
+    }
+  ]
+}

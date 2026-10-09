@@ -1,0 +1,17 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadAppSecrets",
+      "Effect": "Allow",
+      "Action": ["secretsmanager:GetSecretValue"],
+      "Resource": "arn:aws:secretsmanager:*:*:secret:*/db-credentials-*"
+    },
+    {
+      "Sid": "TerraformStateAccess",
+      "Effect": "Allow",
+      "Action": ["s3:GetObject", "s3:PutObject", "s3:ListBucket"],
+      "Resource": ["arn:aws:s3:::domain-infra-tfstate-*", "arn:aws:s3:::domain-infra-tfstate-*/*"]
+    }
+  ]
+}

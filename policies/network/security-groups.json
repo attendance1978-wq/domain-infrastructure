@@ -1,0 +1,5 @@
+{
+  "alb":  { "ingress": [{"port": 80, "cidr": "0.0.0.0/0"}, {"port": 443, "cidr": "0.0.0.0/0"}] },
+  "app":  { "ingress": [{"port": 80, "source": "alb"}] },
+  "db":   { "ingress": [{"port": 5432, "source": "app"}] }
+}

@@ -1,0 +1,7 @@
+services:
+  app:
+    command: ["npx", "nodemon", "server.js"]
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ..:/app
